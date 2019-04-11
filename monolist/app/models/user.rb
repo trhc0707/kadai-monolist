@@ -6,7 +6,7 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
   
-  has_many :overships
+  has_many :ownerships
   has_many :items, through: :ownerships
   has_many :wants
   has_many :want_items, through: :wants, source: :item
